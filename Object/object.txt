@@ -1,0 +1,53 @@
+object are the collection of key value pair, where key is string and value can be anything
+An empty object (“empty cabinet”) can be created using one of two syntaxes:
+We can also use multiword property names, but then they must be quoted for exampple "likes birds": true
+For multiword properties, the dot access doesn’t work:
+ Property existence test, “in” operator  syntax is :- "key" in object
+The "for..in" loop:- To walk over all keys of an object, there exists a special form of the loop: for..in  Syntax :- for (key in object) {
+ executes the body for each key among object properties
+}
+
+
+# Task level 1
+1- Write the code, one line for each action:
+
+    Create an empty object user.
+    Add the property name with the value John.
+    Add the property surname with the value Smith.
+    Change the value of the name to Pete.
+    Remove the property name from the object.
+
+2- Write the function isEmpty(obj) which returns true if the object has no properties, false otherwise.
+
+3- Create a function multiplyNumeric(obj) that multiplies all numeric property values of obj by 2.
+
+For instance:
+
+ before the call
+vlet menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
+
+multiplyNumeric(menu);
+
+ after the call
+menu = {
+  width: 400,
+  height: 600,
+  title: "My menu"
+};
+
+-----------------------------------------------------------------------------------------------
+Object references and copying 
+One of the fundamental differences of objects versus primitives is that objects are stored and copied “by reference”, whereas primitive values: strings, numbers, booleans, etc – are always copied “as a whole value”.
+A variable assigned to an object stores not the object itself, but its “address in memory” – in other words “a reference” to it.
+object.assign syntax is :- Object.assign(dest, ...sources)
+    The first argument dest is a target object.
+    Further arguments is a list of source objects.
+
+
+# **Deep Clone**
+A deep clone, on the other hand, is a copy of an object that includes copies of all nested objects. This means that the new object and the original object do not share any objects.
+
