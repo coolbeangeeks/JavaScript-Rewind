@@ -1,0 +1,28 @@
+The optional chaining ?. is a safe way to access nested object properties, even if an intermediate property doesn’t exist.
+As an example, let’s say we have user objects that hold the information about our users.
+    Most of our users have addresses in user.address property, with the street user.address.street, but some did not provide them.
+
+    In such case, when we attempt to get user.address.street, and the user happens to be without an address, we get an error:
+
+Instead of optional chaining we can use ternery operator and & operator but the code becomes so duplicate. 
+
+optional chaining:- The optional chaining ?. stops the evaluation if the value before ?. is undefined or null and returns undefined.
+
+Then ?.() checks the left part: if the admin function exists, then it runs (that’s so for userAdmin). Otherwise (for userGuest) the evaluation stops without errors.
+
+The ?.[] syntax also works, if we’d like to use brackets [] to access properties instead of dot .. Similar to previous cases, it allows to safely read a property from an object that may not exist.
+
+!!!important 1
+Don’t overuse the optional chaining
+We should use ?. only where it’s ok that something doesn’t exist.
+
+For example, if according to our code logic user object must exist, but address is optional, then we should write user.address?.street, but not user?.address?.street.
+
+Then, if user happens to be undefined, we’ll see a programming error about it and fix it. Otherwise, if we overuse ?., coding errors can be silenced where not appropriate, and become more difficult to debug.
+
+
+!!! important 2
+We can use ?. for safe reading and deleting, but not writing Ex:- 
+let user = null;
+
+user?.name = "John"; // Error, doesn't work because it evaluates to: undefined = "John"
