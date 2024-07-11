@@ -1,0 +1,35 @@
+ **Array**:- Collection of variables of different types at one place
+
+**push()**` =Adds one or more elements to the end of an array and returns the new length of the array.
+
+**pop()**=`Removes the last element from an array and returns that element.
+
+**shift()**` =Removes the first element from an array and returns that element.
+
+**unshift()**=Adds one or more elements to the beginning of an array and returns the new length of the array.
+
+**slice()= **Returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included).
+
+**splice()**` =Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+
+**forEach()**`** = **Executes a provided function once for each array element.
+
+**map()**` =Creates a new array populated with the results of calling a provided function on every element in the calling array.
+
+
+**filter()**` =Creates a new array with all elements that pass the test implemented by the provided function.
+
+**reduce()**` =Executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+
+**sort()**`** **=Sorts the elements of an array in place and returns the sorted array.
+
+**join()**` =Joins all elements of an array into a string and returns this string.
+
+
+
+
+
+
+
+
+
