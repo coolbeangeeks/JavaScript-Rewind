@@ -1,0 +1,40 @@
+ **Local Storage and Session Storage in JavaScript**
+ 
+ Both Local Storage and Session Storage are part of the Web Storage API, which allows websites to store key-value pairs in a web browser.
+
+** Local Storage
+- Lifespan: Data in Local Storage persists even after the browser is closed and reopened. The data is stored indefinitely until explicitly deleted.
+- Scope: Data is accessible to any page within the same domain
+**Methods
+- setItem(key, value): Stores a key-value pair.
+- getItem(key): Retrieves the value associated with the given key.
+- removeItem(key): Removes the key-value pair specified by the key.
+- clear(): Clears all key-value pairs in the storage.
+- length: Returns the number of key-value pairs in the storage.
+- key(index): Returns the key at the specified index.
+
+
+**Session Storage
+- Lifespan: Data in Session Storage is only available for the duration of the page session. It is cleared when the page session ends, which happens when the browser or tab is closed.
+
+- Scope: Data is only accessible to the page that stored it and is not shared across tabs or windows.
+
+**Methods
+- setItem(key, value): Stores a key-value pair.
+- getItem(key): Retrieves the value associated with the given key.
+- removeItem(key): Removes the key-value pair specified by the key.
+- clear(): Clears all key-value pairs in the storage.
+- length: Returns the number of key-value pairs in the storage.
+- key(index): Returns the key at the specified index.
+
+**Use Cases
+**Local Storage**:
+
+    - Storing user preferences that should persist across sessions, such as theme settings.
+    - Caching data for offline access.
+    - Keeping user authentication tokens if persistent login is required.
+ **Session Storage**:
+ 
+    - Storing temporary data that should not persist beyond the current session, such as a one-time form input.
+    - Managing data within a single tab, such as multi-step form data.
+

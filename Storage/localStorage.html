@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage Example</title>
+</head>
+<body>
+    <h1>localStorage Example</h1>
+    <button id="saveButton">Save to localStorage</button>
+    <button id="loadButton">Load from localStorage</button>
+    <button id="clearButton">Clear localStorage</button>
+
+    <script>
+        const user = {
+            id: 1,
+            name: "Jane Doe",
+            contact: {
+                email: "jane.doe@example.com",
+                phone: "123-456-7890"
+            },
+            preferences: {
+                theme: "dark",
+                language: "en"
+            }
+        };
+
+        const saveButton = document.getElementById('saveButton');
+        const loadButton = document.getElementById('loadButton');
+        const clearButton = document.getElementById('clearButton');
+
+        saveButton.addEventListener('click', () => {
+            // Convert the object to a JSON string and store it in localStorage
+            localStorage.setItem('userData', JSON.stringify(user));
+            alert('Saved to localStorage');
+        });
+
+        loadButton.addEventListener('click', () => {
+            // Retrieve the JSON string from localStorage and parse it back to an object
+            const savedData = localStorage.getItem('userData');
+            if (savedData) {
+                const userData = JSON.parse(savedData);
+                console.log('Loaded from localStorage:', userData);
+                alert('Loaded from localStorage. Check the console for details.');
+            } else {
+                alert('No data found in localStorage');
+            }
+        });
+
+        clearButton.addEventListener('click', () => {
+            // Clear the stored data from localStorage
+            localStorage.removeItem('userData');
+            alert('Cleared localStorage');
+        });
+    </script>
+</body>
+</html>
